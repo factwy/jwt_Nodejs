@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>초기 화면</title>
+    </head>
+    <body>
+        <fieldset>
+            <div>
+                <button id="signin">로그인</button>
+            </div>
+            <div>
+                <button id="signup">회원가입</button>
+            </div>
+        </fieldset>
+    </body>
+    <script>
+        const signin = document.getElementById('signin')
+        const signup = document.getElementById('signup')
+
+        signin.addEventListener('click', ()=>{
+            fetch('/frontend/html/signin')
+        })
+
+        signup.addEventListener('click', ()=>{
+            fetch('/frontend/html/signup')
+        })
+    </script>
+</html>
