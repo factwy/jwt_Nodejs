@@ -1,7 +1,7 @@
 const mysql = require('mysql2')
 const dotenv = require('dotenv')
 
-dotenv.config()
+dotenv.config({path: './backend/db/.env'})
 
 const dbInfo = {
     host: process.env.DB_HOST,
@@ -9,15 +9,6 @@ const dbInfo = {
     password: process.env.DB_PASSWORD,
     database: process.env.DB_DATABASE
 }
-
-console.log(dbInfo)
-
-// const dbInfo = {
-//     host: 'localhost',
-//     user: 'factwy',
-//     password: '8865',
-//     database: 'jwt_db'
-// }
 
 module.exports = {
     init: function() {

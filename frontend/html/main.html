@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="output">
+    </body>
+    <script>
+        const output = document.getElementById('output')
+
+        output.readOnly = true
+
+        window.addEventListener('load', ()=>{
+            fetch('/sign/check_auth', {
+                method:'get'
+            }).then((res)=>res.json())
+            .then((val)=>{
+                console.log(val)
+                output.value = val.userName
+            })
+        })
+    </script>
+</html>

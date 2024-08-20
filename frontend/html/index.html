@@ -8,23 +8,17 @@
     <body>
         <fieldset>
             <div>
-                <button id="signin">로그인</button>
+                <a href="./signin.html">
+                    <button>로그인</button>
+                </a>
+                <br>
             </div>
             <div>
-                <button id="signup">회원가입</button>
+                <br>
+                <a href="./signup.html">
+                    <button>회원가입</button>
+                </a>
             </div>
         </fieldset>
     </body>
-    <script>
-        const signin = document.getElementById('signin')
-        const signup = document.getElementById('signup')
-
-        signin.addEventListener('click', ()=>{
-            fetch('/frontend/html/signin')
-        })
-
-        signup.addEventListener('click', ()=>{
-            fetch('/frontend/html/signup')
-        })
-    </script>
 </html>
